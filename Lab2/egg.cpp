@@ -2,8 +2,9 @@
 #include <iostream>
 #include <vector>
 #include <cmath>
-#define POM 4
+
 int model = 1;
+
 class Point{
     public:
         float x,y,z;
@@ -85,6 +86,7 @@ void draw(std::vector<std::vector<Point>> &points, int n){
                 glEnd();
             }
         }
+        // Korekta (na obrazie nie było częsci lini siatki)
         for(int j = 0; j <n;j++){
             glBegin(GL_LINES);
             glVertex3f(points[0][0].x / 10.0f , points[0][0].y / 10.0f -0.5f  , points[0][0].z / 10.0f ) ;
